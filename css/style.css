@@ -356,3 +356,77 @@ main {
     letter-spacing: 1;
     padding: 20px;
 }
+
+.footer {
+    
+    background-color: #f8f8f8; 
+    color: #333; 
+    padding: 30px 50px 15px 50px; 
+    font-family: Arial, sans-serif; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-logo-contato ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-logo-contato li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    display: flex; 
+    align-items: center;
+}
+
+.footer-logo-contato li i {
+    margin-right: 10px;
+    width: 18px; 
+    text-align: center;
+    color: #444; 
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: right; 
+}
+
+.footer-menu li {
+    margin-bottom: 15px;
+}
+
+.footer-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd; 
+    color: #777;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
