@@ -355,14 +355,15 @@ main {
     font-style: normal;
     letter-spacing: 1;
     padding: 20px;
+    background-color: var(--cor-fundo-secao)
 }
 
 .footer {
     
-    background-color: #f8f8f8; 
-    color: #333; 
-    padding: 30px 50px 15px 50px; 
-    font-family: Arial, sans-serif; 
+    background-color: var(--cor-fundo-secao); 
+    color: var(--cor-fonte); 
+    padding: 30px 40px 15px 50px; 
+    font-family: Arial, sans-serif, 'Titan One'; 
 }
 
 .footer-container {
@@ -371,7 +372,7 @@ main {
     align-items: flex-start;
     max-width: 1200px; 
     margin: 0 auto; 
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .footer-logo {
@@ -396,13 +397,13 @@ main {
     margin-right: 10px;
     width: 18px; 
     text-align: center;
-    color: #444; 
+    color: var(--cor-fonte); 
 }
 
 .footer-menu ul {
     list-style: none;
     padding: 0;
-    text-align: right; 
+    text-align: center; 
 }
 
 .footer-menu li {
@@ -410,11 +411,19 @@ main {
 }
 
 .footer-menu a {
-    color: #333;
+    color: var(--cor-fonte);
     text-decoration: none;
     font-size: 16px;
+    font-family: 'Titan One';
 }
+.footer-menu h1 {
+    font-family: 'Titan One';
+    font-size: 22px;
+    padding: 20px;
+    font-weight: 400;
+    
 
+}
 .footer-menu a:hover {
     text-decoration: underline;
 }
@@ -424,9 +433,45 @@ main {
     font-size: 14px;
     padding-top: 15px;
     border-top: 1px solid #ddd; 
-    color: #777;
+    color: white;
 }
 
 .footer-copyright p {
     margin: 0;
+}
+.secao_apadrinhamento {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+}
+.secao_apadrinhamento2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.secao_apadrinhamento2 img {
+   width: 400px;
+   height: auto;
+}
+.texto_apadrinhamento  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.secao_apadrinhamento p {
+  font-size: 20px;
+}
+.botaoapadrinhe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+    text-decoration: none;
+    color: #0A1A33;
+    font-weight: bold;
+    padding: 10px;
 }
