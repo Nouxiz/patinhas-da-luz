@@ -20,3 +20,28 @@ function carrossel(){
 }
 
 setInterval(carrossel, 4000);
+
+document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('read-more-btn');
+        const hiddenContent = document.getElementById('hidden-pets');
+
+       
+        if (btn && hiddenContent) {
+            btn.addEventListener('click', function() {
+                
+                if (hiddenContent.classList.contains('hidden-content')) {
+                    
+                   
+                    hiddenContent.classList.remove('hidden-content');
+                    btn.textContent = 'VER MENOS BICHINHOS';
+                    
+                } else {
+                    
+                    
+                    hiddenContent.classList.add('hidden-content');
+                    btn.textContent = 'VER MAIS BICHINHOS';
+                    
+                }
+            });
+        }
+    });
