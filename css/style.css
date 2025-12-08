@@ -123,11 +123,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cor-fonte);
+    color: var(--cor-texto);
     font-family: 'Titan One';
     font-weight: 400;
     font-style: normal;
     letter-spacing: 1;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -356,7 +357,7 @@ main {
 .footer {
     
     background-color: var(--cor-fundo-secao); 
-    color: var(--cor-fonte); 
+    color: var(--cor-principal); 
     padding: 30px 40px 15px 50px; 
     font-family: Arial, sans-serif, 'Titan One'; 
 }
@@ -406,7 +407,7 @@ main {
 }
 
 .footer-menu a {
-    color: var(--cor-fonte);
+    color: var(--cor-principal);
     text-decoration: none;
     font-size: 16px;
     font-family: 'Titan One';
@@ -629,14 +630,16 @@ main {
 }
 
 .secao_bazar {
+    display: flex;
     padding: 60px 20px;
     text-align: center;
+    gap: 20px;
 }
 
 .secao_bazar h2 {
     font-size: 32px;
     margin-bottom: 40px;
-    color: var(--cor-fundo-secao);
+    color: var(--cor-texto);
     font-family: "Titan One", sans-serif;
     font-weight: 400;
     padding: 20px;
@@ -650,19 +653,89 @@ main {
 .cartao_horarios,
 .cartao_doacoes,
 .cartao_renda {
-    margin: 20px auto;
+    max-width: 1000px;
+    background-color: var(--cor-texto);
+    margin: 30px auto;
+    margin-bottom: 20px;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 50px;
     box-shadow: 0 3px 7px rgba(0,0,0,0.1);
     text-align: center;
+    color: white;
 }
 
 .cartao_bazar h2,
 .cartao_horarios h2,
 .cartao_doacoes h2,
 .cartao_renda h2 {
-    color: var(--cor-fundo-secao);
+    color: var(--cor-principal);
     font-size: 26px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: "Titan One", sans-serif;
+}
+.botao_bazar {
+    text-decoration: none;
+    color: #0A1A33;
+    padding: 10px;
+    background-color: var(--cor-principal);
+
+}
+.secao_bazar a{
+    border-radius: 15px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    text-align: center;
+    font-style: bold;
+}
+
+.secao_ajuda {
+    padding: 40px;
+    background: var(--cor-texto);
+    text-align: center;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+    color: white;
+}
+.secao_ajuda h2 {
+    font-family: 'Titan One';
+    color: var(--cor-principal);
+    font-weight: 400;
+}
+
+.ajuda_texto {
+    font-size: 16px;
+    margin: 15px 0 25px 0;
+    color: white;
+}
+
+
+.lista_ajuda {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.lista_ajuda li {
+    font-size: 15px;
+    margin: 8px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.botao_bazar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--cor-principal);
+    color: #0A1A33;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.botao_bazar:hover {
+    transform: scale(1.05);
 }
