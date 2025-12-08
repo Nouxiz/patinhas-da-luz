@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px 80px;
-    background-color: #0C3C63;
+    background-color: var(--cor-texto);
     gap: 50px;
 }
 
@@ -123,7 +123,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cor-texto);
+    color: var(--cor-fundo-secao);
     font-family: 'Titan One';
     font-weight: 400;
     font-style: normal;
@@ -154,12 +154,15 @@ footer {
     font-family: "Titan One";
     font-style: normal;
     letter-spacing: 1;
-    color: var(--cor-fonte);
+    color: var(--cor-fundo-secao);
 }
 
 .texto_secaoimg {
     text-align: center;
     gap: 20px;
+    font-family: 'Titan One';
+    font-weight: 700;
+    color: var(--cor-fundo-secao)
 }
 
 .imgsecao {
@@ -356,7 +359,7 @@ main {
 
 .footer {
     
-    background-color: var(--cor-fundo-secao); 
+    background-color: var(--cor-texto); 
     color: var(--cor-principal); 
     padding: 30px 40px 15px 50px; 
     font-family: Arial, sans-serif, 'Titan One'; 
@@ -393,7 +396,7 @@ main {
     margin-right: 10px;
     width: 18px; 
     text-align: center;
-    color: var(--cor-fonte); 
+    color: var(--cor-fundo); 
 }
 
 .footer-menu ul {
@@ -592,7 +595,7 @@ main {
     width: 100%;
 }
 #links a{
-    color: #D9A600;
+    color: var(--cor-fundo);
 }
 
 
@@ -638,7 +641,6 @@ main {
 
 .secao_bazar h2 {
     font-size: 32px;
-    margin-bottom: 40px;
     color: var(--cor-texto);
     font-family: "Titan One", sans-serif;
     font-weight: 400;
@@ -653,12 +655,11 @@ main {
 .cartao_horarios,
 .cartao_doacoes,
 .cartao_renda {
-    max-width: 1000px;
+    max-width: 500px;
     background-color: var(--cor-texto);
-    margin: 30px auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 25px;
-    border-radius: 50px;
+    border-radius: 60px;
     box-shadow: 0 3px 7px rgba(0,0,0,0.1);
     text-align: center;
     color: white;
@@ -738,4 +739,57 @@ main {
 
 .botao_bazar:hover {
     transform: scale(1.05);
+}
+.texto_ajude {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+.texto_ajude h2 {
+    font-family: 'Titan One';
+    font-weight: 400;
+    color: var(--cor-fundo-secao)
+}
+.secao_ajudas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.secao_ajudas h2 {
+    font-family: 'Titan One';
+    font-weight: 400;
+    color: var(--cor-fundo-secao)
+}
+.secao_pix,
+.secao_doacao {
+    max-width: 400px;
+    background-color: var(--cor-texto);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+    
+    
+}
+.secao_apadrinhe_ajude {
+    display: flex;
+    flex-direction: column;
+}
+.secao_apadrinhe_ajude h2 {
+    text-align: center;
+    font-family: 'Titan One';
+    color: var(--cor-fundo-secao)
+}
+.secao_apadrinhe_ajude p {
+    text-align: center;
+    padding: 20px;
+
+}
+.secao_contatos {
+    text-align: center;
+    
 }
