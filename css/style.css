@@ -1,16 +1,79 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; 
 }
 
 :root {
-    --cor-principal: #FFC800;     
-    --cor-hover: #D9A600;          
-    --cor-texto: #0A1A33;          
-    --cor-fundo: #ffffff;          
-    --cor-fundo-secao: #0C3C63;  
-    --cor-fonte: #F2C94C;  
+    --cor-principal: #FFC800;        /* Amarelo Patinhas */
+    --cor-hover: #D9A600;            /* Amarelo Escuro */
+    --cor-texto: #0A1A33;            /* Azul Quase Preto */
+    --cor-fundo: #ffffff;            /* Branco */
+    --cor-fundo-secao: #0C3C63;      /* Azul Escuro Patinhas */
+    --cor-fonte: #F2C94C;            /* Amarelo/Destaque */
 }
+
+body {
+    padding: 0;
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+}
+
+
+
+.titulo-secao-principal,
+.titulo-numeros,
+.titulo-lateral,
+.cta-button-top,
+.cta-button-inline,
+.footer-menu h1,
+.menu-principal a,
+.secao h2, .secao2 h2,
+.divsecao h3,
+.texto_secaoimg h1,
+.secao_bazar h2,
+.cartao_bazar h2, .cartao_horarios h2, .cartao_doacoes h2, .cartao_renda h2,
+.secao_ajuda h2,
+.headeradote {
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400; 
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+
+.divsecao-novo h3 {
+    font-family: 'Titan One', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--cor-fundo-secao);
+}
+
+
+.card-numero p strong {
+    font-family: 'Titan One', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 3px;
+}
+
+
+.divsecao-novo p,
+.coluna-lateral,
+.menu-lateral a,
+.card-numero p {
+    font-family: 'Changa One', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+
+/* MENU (HEADER) */
+
 
 header {
     display: flex;
@@ -19,14 +82,6 @@ header {
     padding: 10px 80px;
     background-color: #0C3C63;
     gap: 50px;
-}
-
-body {
-    
-    padding: 0;
-    margin: 0; 
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #FFFFFF;
 }
 
 #logo {
@@ -52,15 +107,13 @@ body {
 .menu-principal a {
     text-decoration: none;
     color: var(--cor-principal);
-    font-weight: 400;
-    font-family: "Titan One";
     font-style: normal;
-    letter-spacing: 1;
 }
 
 .menu-principal a:hover {
     color: #003A99; 
 }
+
 
 .botao {
     background-color: var(--cor-principal);
@@ -74,43 +127,123 @@ body {
     background-color: var(--cor-hover);
 }
 
-.imagemindex {
-    background-image: url(../img/adote-um-bichinho.png);
-    background-size: cover;
-    background-position: center;
-
-
-}
-.imagemindex2 {
-    background-image: url(../img/vakinha.png);
-    background-size: cover;
-    background-position: center;
-
-}
-.imagemindex3 {
-    background-image: url(../img/bazar.png);
-    background-size: cover;
-    background-position: center;
-
-}
-.blocointeiro {
+.botao2 {
     display: flex;
     justify-content: center;
-    height: 300px;
+    background-color: var(--cor-principal);
+    text-decoration: none;
+    color: #0A1A33;
+    font-weight: bold;
+    padding: 5px;
 }
-.imagemindex, .imagemindex2, .imagemindex3 {
-    width: 100%;     
-    height: 100%;
+.botao2:hover {
+    background-color: var(--cor-hover);
+}
+
+.botaoapadrinhe {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); 
-    color: white;
-    background-size: center;
-    background-position: center;
-    gap: 15px;
+    background-color: var(--cor-principal);
+    text-decoration: none;
+    color: #0A1A33;
+    font-weight: bold;
+    padding: 10px;
 }
+
+.apadrinhe-button {
+    background-color: #000; 
+    color: #fff; 
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.apadrinhe-button:hover {
+    background-color: #333;
+}
+
+.botao_bazar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--cor-principal);
+    color: #0A1A33;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.botao_bazar:hover {
+    transform: scale(1.05);
+}
+
+.secao_bazar a{
+    border-radius: 15px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    text-align: center;
+    font-style: bold;
+}
+
+
+.cta-bar {
+    background-color: var(--cor-principal); 
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button-top {
+    background-color: var(--cor-fundo-secao); 
+    color: var(--cor-principal); 
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button-top:hover {
+    background-color: #0A2D4A; 
+    transform: scale(1.03);
+}
+
+.cta-button-inline {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button-inline:hover {
+    background-color: var(--cor-hover);
+}
+
+
+
+main {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
 .secao, .secao2 {
     text-align: center;
     font-size: 20px;
@@ -124,55 +257,8 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--cor-texto);
-    font-family: 'Titan One';
-    font-weight: 400;
     font-style: normal;
-    letter-spacing: 1;
     margin-bottom: 20px;
-}
-
-footer {
-    background-color: var(--cor-fundo-secao);
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-    font-size: 14px;
-    border-top: 1px solid #D9D9D9;
-}
-
-.secao4 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 50px;
-}
-
-.divsecao h3 {
-    text-align: center;
-    padding: 20px;
-    font-weight: 400;
-    font-family: "Titan One";
-    font-style: normal;
-    letter-spacing: 1;
-    color: var(--cor-fonte);
-}
-
-.texto_secaoimg {
-    text-align: center;
-    gap: 20px;
-}
-
-.imgsecao {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 800px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-.imgsecao img {
-    width: 100%;
-    height: 100%;
 }
 
 .bannertopo {
@@ -203,20 +289,40 @@ footer {
 }
 
 
-.textobazar h1 {
-    text-align: center;
+.banner-principal {
+    height: 220px;
+    width: 100%;
+    padding: 0;
+    background-image: url('img/Banner_Sobre_nos.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.secaobazar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+.banner-principal h1 {
+    font-family: 'Titan One', sans-serif;
+    font-size: 2.5em; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 20px;
 }
+
+.banner-principal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+
 .banneradocao {
     height: 400px;
     width: 100%;
     padding: 0;
-    
-    
 }
 
 .banneradocao img {
@@ -224,78 +330,251 @@ footer {
     width: 100%;
     object-fit: cover;
     object-position: 50%;
-    
-}
-.textoadocao {
-    text-align: center;
-    padding: 50px;
-}
-.cachorroadocao {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    max-width: 900px; 
-    margin: 0 auto; 
-    padding: 40px 20px;
-}
-.cartaoadocao {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-.imgadocao {
-    width: 100%; 
-    height: 200px;  
-}
-
-.texto-adocao {
-    margin-bottom: 15px;
-}
-.botao2 {
-    display: flex;
-    justify-content: center;
-    background-color: var(--cor-principal);
-    text-decoration: none;
-    color: #0A1A33;
-    font-weight: bold;
-    padding: 5px;
-}
-.botao2:hover {
-    background-color: var(--cor-hover);
 }
 
 .bannerajude {
     height: 400px;
     width: 100%;
     padding: 0;
-    
-    
 }
 .bannerajude img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: 50%;
-    
 }
+
+.headeradote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-fonte);
+    font-style: normal;
+    padding: 20px;
+    background-color: var(--cor-fundo-secao)
+}
+.container-principal {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.conteudo-principal {
+    flex: 3; 
+    min-width: 0;
+}
+
+.coluna-lateral {
+    flex: 1; 
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7f7f7; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    align-self: flex-start; 
+}
+
+.titulo-secao-principal {
+    font-size: 2.2em;
+    color: var(--cor-fundo-secao); 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.secao-numeros {
+    background-color: var(--cor-fundo-secao); 
+    color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.titulo-numeros {
+    color: var(--cor-principal);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.grid-numeros {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card-numero {
+    flex: 1;
+    min-width: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.icon-numero {
+    color: var(--cor-principal);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.card-numero p {
+    font-size: 1.1em;
+}
+
+.secao4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px;
+    padding: 20px 0; 
+    margin-bottom: 30px;
+}
+
+.divsecao {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.divsecao h3 {
+    text-align: center;
+    padding: 20px;
+    font-style: normal;
+    color: var(--cor-fonte);
+}
+
+.divsecao-novo {
+    padding: 0 10px; 
+}
+.divsecao-novo h3 {
+    color: var(--cor-fundo-secao); 
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.divsecao-novo p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/*  COLUNA LATERAL (COMO AJUDAR) */
+
+.titulo-lateral {
+    font-size: 1.5em;
+    color: var(--cor-fundo-secao);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cor-principal);
+    padding-bottom: 5px;
+}
+
+.menu-lateral {
+    margin-bottom: 30px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-lateral li {
+    margin: 8px 0;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.menu-lateral a:hover {
+    color: var(--cor-fundo-secao);
+    font-weight: bold;
+}
+
+.menu-lateral a i {
+    margin-right: 10px;
+    color: var(--cor-principal);
+}
+
+
+
+/*  GALERIA E IMAGENS */
+
+
+.texto_secaoimg {
+    text-align: center;
+    gap: 20px;
+}
+
+.imgsecao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.imgsecao img {
+    width: 100%;
+    height: 100%;
+}
+
+/* IMAGENS DE DESTAQUE (INDEX / AJUDE) */
+
+.blocointeiro {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+.imagemindex, .imagemindex2, .imagemindex3 {
+    width: 100%;     
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); 
+    color: white;
+    background-size: center;
+    background-position: center;
+    gap: 15px;
+}
+
+.imagemindex {
+    background-image: url(../img/adote-um-bichinho.png);
+    background-size: cover;
+    background-position: center;
+}
+.imagemindex2 {
+    background-image: url(../img/vakinha.png);
+    background-size: cover;
+    background-position: center;
+}
+.imagemindex3 {
+    background-image: url(../img/bazar.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .secaoajude {
     display: flex;
     height: 300px;
 }
 .bloco {
-   width: 50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .doacao {
     background-image: url('../img/banner2.jpg');
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5)
-
 }
 .pix {
     background-image: url('../img/banner2.jpg');
@@ -310,8 +589,6 @@ footer {
     padding: 0;
     margin: 0; 
 }
-
-
 .carrossel {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
@@ -319,15 +596,11 @@ footer {
     height: 400px;
     padding: 0;
 }
-
-
 .container {
     display: flex;
     transition: transform 0.5s ease-in-out; 
     transform: translate(0);
 }
-
-
 .container img {
     object-fit: contain; 
     flex-shrink: 0;
@@ -336,26 +609,219 @@ footer {
     background-color: #54a9e0; 
 }
 
-main {
-    padding: 0;
-    margin: 0;
-    width: 100%;
+/*  PÁGINAS ESPECÍFICAS (APADRINHE / BAZAR / AJUDE) */
+
+.textobazar h1 {
+    text-align: center;
 }
-.headeradote {
+
+.secaobazar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.textoadocao {
+    text-align: center;
+    padding: 50px;
+}
+
+.cachorroadocao {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 20px 0; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.cartaodoacao {
+    flex: 1; 
+    max-width: 350px; 
+    padding: 20px;
+    text-align: center;
+}
+
+.imgadocao {
+    width: 100%; 
+    height: auto;
+    max-height: 250px;
+    object-fit: cover; 
+    margin-bottom: 15px;
+}
+
+#Destaque {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.secao_bazar {
+    display: flex;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 20px;
+}
+
+.secao_bazar div {
+    margin: 0 auto;
+}
+
+.cartao_bazar, .cartao_horarios, .cartao_doacoes, .cartao_renda {
+    max-width: 1000px;
+    background-color: var(--cor-texto);
+    margin: 30px auto;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 50px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+}
+
+.cartao_bazar h2, .cartao_horarios h2, .cartao_doacoes h2, .cartao_renda h2 {
+    color: var(--cor-principal);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.secao_ajuda {
+    padding: 40px;
+    background: var(--cor-texto);
+    text-align: center;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+    color: white;
+}
+
+.ajuda_texto {
+    font-size: 16px;
+    margin: 15px 0 25px 0;
+    color: white;
+}
+
+.lista_ajuda {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.lista_ajuda li {
+    font-size: 15px;
+    margin: 8px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Apadrinhamento */
+.secao_apadrinhamento {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.secao_apadrinhamento2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.secao_apadrinhamento2 img {
+    width: 400px;
+    height: auto;
+}
+.texto_apadrinhamento  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.secao_apadrinhamento p {
+    font-size: 20px;
+}
+.content-block-adote {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 30px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    border: 1px solid #ccc; 
+}
+.text-content-adote {
+    flex: 1; 
+    padding-right: 20px; 
+}
+
+.text-content-adote h2 {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-content-adote p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.card-polaroid {
+    flex-shrink: 0; 
+    width: 250px; 
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px 10px 5px 10px; 
+    text-align: center;
+}
+.card-polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #fff; 
+}
+
+.card-caption {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cor-fonte);
-    font-family: 'Titan One';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 1;
-    padding: 20px;
-    background-color: var(--cor-fundo-secao)
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+.pet-icon {
+    font-size: 20px; 
+    margin-right: 8px;
 }
 
+.pet-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+.apadrinhe-secao-geral {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+    padding: 20px 0;
+}
+.hidden-content {
+    display: none;
+    width: 100%;
+    flex-direction: column; 
+    align-items: center;
+}
+.read-more-container {
+    padding: 20px 0 40px 0;
+    text-align: center;
+    width: 100%;
+}
+#links a{
+    color: #D9A600;
+}
+
+/* (FOOTER) */
+
 .footer {
-    
     background-color: var(--cor-fundo-secao); 
     color: var(--cor-principal); 
     padding: 30px 40px 15px 50px; 
@@ -410,15 +876,11 @@ main {
     color: var(--cor-principal);
     text-decoration: none;
     font-size: 16px;
-    font-family: 'Titan One';
 }
 .footer-menu h1 {
-    font-family: 'Titan One';
     font-size: 22px;
     padding: 20px;
     font-weight: 400;
-    
-
 }
 .footer-menu a:hover {
     text-decoration: underline;
@@ -435,130 +897,45 @@ main {
 .footer-copyright p {
     margin: 0;
 }
-.secao_apadrinhamento {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-
+@media (max-width: 1024px) {
+    .container-principal {
+        flex-direction: column; 
+    }
+    .coluna-lateral {
+        width: 100%;
+        order: -1; 
+    }
+    .secao4 {
+        padding: 20px; 
+    }
 }
-.secao_apadrinhamento2 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.secao_apadrinhamento2 img {
-   width: 400px;
-   height: auto;
-}
-.texto_apadrinhamento  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.secao_apadrinhamento p {
-  font-size: 20px;
-}
-.botaoapadrinhe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cor-principal);
-    text-decoration: none;
-    color: #0A1A33;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.content-block-adote {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    gap: 30px;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 900px;
-    border: 1px solid #ccc; 
-}
-
-
-.text-content-adote {
-    flex: 1; 
-    padding-right: 20px; 
-}
-
-.text-content-adote h2 {
-    font-size: 24px; 
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.text-content-adote p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-
-.card-polaroid {
-    flex-shrink: 0; 
-    width: 250px; 
-    background-color: #fff; 
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    padding: 10px 10px 5px 10px; 
-    text-align: center;
-}
-
-.card-polaroid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 1px solid #fff; 
-}
-
-.card-caption {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding-bottom: 5px;
-}
-
-.pet-icon {
-    font-size: 20px; 
-    margin-right: 8px;
-}
-
-.pet-name {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-
-
-.apadrinhe-button {
-    background-color: #000; 
-    color: #fff; 
-    padding: 10px 20px;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 2px;
-    font-size: 14px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-.apadrinhe-button:hover {
-    background-color: #333;
-}
-
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    .menu-principal {
+        margin-top: 0;
+    }
+    .secao4 {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+    }
+    .grid-numeros {
+        flex-direction: column; 
+    }
+    .cta-button-top {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    .cachorroadocao {
+        grid-template-columns: 1fr;
+    }
+    .secaobazar {
+        grid-template-columns: 1fr;
+    }
     .content-block-adote {
         flex-direction: column; 
         align-items: center;
@@ -568,174 +945,15 @@ main {
         padding-right: 0;
         text-align: center;
     }
-}
-
-.apadrinhe-secao-geral {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    width: 100%;
-    padding: 20px 0;
-}
-
-.hidden-content {
-    display: none;
-    
-    width: 100%;
-    flex-direction: column; 
-    align-items: center;
-}
-
-.read-more-container {
-    padding: 20px 0 40px 0;
-    text-align: center;
-    width: 100%;
-}
-#links a{
-    color: #D9A600;
-}
-
-
-.cachorroadocao {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: flex-start; 
-    gap: 20px; 
-    padding: 20px 0; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-}
-
-
-.cartaodoacao {
-    flex: 1; 
-    max-width: 350px; 
-    padding: 20px;
-    text-align: center;
-    
-}
-
-
-.imgadocao {
-    width: 100%; 
-    height: auto;
-    max-height: 250px;
-    object-fit: cover; 
-    margin-bottom: 15px;
-}
-
-#Destaque {
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.secao_bazar {
-    display: flex;
-    padding: 60px 20px;
-    text-align: center;
-    gap: 20px;
-}
-
-.secao_bazar h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: var(--cor-texto);
-    font-family: "Titan One", sans-serif;
-    font-weight: 400;
-    padding: 20px;
-}
-
-.secao_bazar div {
-    margin: 0 auto;
-}
-
-.cartao_bazar,
-.cartao_horarios,
-.cartao_doacoes,
-.cartao_renda {
-    max-width: 1000px;
-    background-color: var(--cor-texto);
-    margin: 30px auto;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 50px;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
-    text-align: center;
-    color: white;
-}
-
-.cartao_bazar h2,
-.cartao_horarios h2,
-.cartao_doacoes h2,
-.cartao_renda h2 {
-    color: var(--cor-principal);
-    font-size: 26px;
-    margin-bottom: 20px;
-    font-family: "Titan One", sans-serif;
-}
-.botao_bazar {
-    text-decoration: none;
-    color: #0A1A33;
-    padding: 10px;
-    background-color: var(--cor-principal);
-
-}
-.secao_bazar a{
-    border-radius: 15px;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
-    text-align: center;
-    font-style: bold;
-}
-
-.secao_ajuda {
-    padding: 40px;
-    background: var(--cor-texto);
-    text-align: center;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.08);
-    color: white;
-}
-.secao_ajuda h2 {
-    font-family: 'Titan One';
-    color: var(--cor-principal);
-    font-weight: 400;
-}
-
-.ajuda_texto {
-    font-size: 16px;
-    margin: 15px 0 25px 0;
-    color: white;
-}
-
-
-.lista_ajuda {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 25px 0;
-}
-
-.lista_ajuda li {
-    font-size: 15px;
-    margin: 8px 0;
-    color: white;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.botao_bazar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: var(--cor-principal);
-    color: #0A1A33;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.2s;
-}
-
-.botao_bazar:hover {
-    transform: scale(1.05);
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo-contato {
+        margin-bottom: 20px;
+    }
+    .footer-logo-contato li {
+        justify-content: center;
+    }
 }
