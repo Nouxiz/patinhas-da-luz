@@ -1,6 +1,9 @@
 <?php
+
 include 'back/conexao.php'
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -234,7 +237,72 @@ include 'back/conexao.php'
     <div>
       <a href="#" class="botao_apadrinhe">Saiba Mais</a>
     </div>
-    
+    <section class="formulario-container">
+    <div class="form-header-box">
+        <h2 class="form-title">
+            QUER CADASTRAR UM ANIMAL PARA ADOÇÃO?
+        </h2>
+        <p class="form-subtitle">
+            Preencha os campos abaixo para iniciar o processo de cadastro do animal.
+        </p>
+    </div>
+    <form class="adocao-form" action="processar_cadastro.php" method="POST">
+        
+        <div class="form-group">
+            <label for="nome_completo">Nome completo</label>
+            <input type="text" id="nome_completo" name="nome_completo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="especie">Gato ou Cachorro</label>
+                <select id="especie" name="especie" required>
+                    <option value="">Selecione</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="raca">Raça</label>
+                <input type="text" id="raca" name="raca">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="idade">Idade (Anos)</label>
+                <input type="number" id="idade" name="idade" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="porte">Porte</label>
+                <select id="porte" name="porte" required>
+                    <option value="">Selecione</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Selecione</option>
+                <option value="macho">Macho</option>
+                <option value="femea">Fêmea</option>
+            </select>
+        </div>
+
+        <button type="submit" class="botao2 form-submit-btn">CADASTRAR ANIMAL</button>
+    </form>
+</section>
  <footer class="footer">
         <div class="footer-container">
 
