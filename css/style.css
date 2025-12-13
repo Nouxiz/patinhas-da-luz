@@ -18,6 +18,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFFFFF;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 
 
@@ -35,7 +39,7 @@ body {
 .cartao_bazar h2, .cartao_horarios h2, .cartao_doacoes h2, .cartao_renda h2,
 .secao_ajuda h2,
 .headeradote {
-    font-family: 'Titan One', sans-serif;
+    font-family: 'Titan One';
     font-weight: 400; 
     text-transform: uppercase;
     letter-spacing: 1px; 
@@ -226,7 +230,7 @@ header {
     margin: 0 auto 30px auto;
     background-color: var(--cor-principal);
     color: var(--cor-texto);
-    font-weight: bold;
+    font-weight: 400;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -427,32 +431,31 @@ main {
 .secao4 {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     padding: 20px 0; 
     margin-bottom: 30px;
 }
 
 .divsecao-novo {
-    display: flex; 
     align-items: center;
     gap: 20px;
     padding: 50px;
 }
 
-.divsecao h3 {
+.divsecao-novo h3 {
     text-align: center;
     padding: 20px;
     font-style: normal;
-    color: var(--cor-fonte);
-}
-
-.divsecao-novo {
-    padding: 0 10px; 
-}
-.divsecao-novo h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
     color: var(--cor-fundo-secao); 
     font-size: 1.4em;
     margin-bottom: 10px;
+}
+
+
+.divsecao-novo {
+    padding: 0 10px; 
 }
 .divsecao-novo p {
     font-size: 1em;
@@ -514,9 +517,9 @@ main {
 .imgsecao {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 40px;
 }
 
 .imgsecao img {
@@ -661,7 +664,7 @@ main {
     margin-bottom: 15px;
 }
 
-#Destaque {
+.Destaque {
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -1113,15 +1116,14 @@ main {
 
 
 .formulario-container {
-    padding: 40px 20px;
-    background-color: #f7f7f7; 
+    padding: 40px 20px;; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .form-header-box {
-    background-color: #1a237e; 
+    background-color: var(--cor-texto); 
     color: #ffffff;
     padding: 25px 50px;
     border-radius: 20px;
@@ -1132,7 +1134,7 @@ main {
 }
 
 .form-title {
-    font-family: 'Titan One', cursive; 
+    font-family: 'Titan One'; 
     font-size: 28px;
     font-weight: 400;
     color: #ffc107; 
@@ -1142,7 +1144,7 @@ main {
 }
 
 .form-subtitle {
-    font-family: 'Acme', sans-serif;
+    font-family: sans-serif;
     font-size: 16px;
     color: #ffffff;
     margin-top: 10px;
@@ -1176,7 +1178,7 @@ main {
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;
-    font-family: 'Acme', sans-serif;
+    font-family: sans-serif;
     font-size: 16px;
 }
 
