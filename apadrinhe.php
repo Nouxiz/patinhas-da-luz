@@ -1,6 +1,11 @@
 <?php
 
-include 'back/conexao.php'
+include 'back/conexao.php';
+$sql = "SELECT id_animal, nome, especie, porte 
+        FROM animais 
+        WHERE status = 'disponivel'";
+
+$result = $conn->query($sql);
 
 ?>
 
@@ -26,7 +31,7 @@ include 'back/conexao.php'
     <nav class="menu-principal">
        <ul>
         <li><a href="bazar.html">Bazar</a></li>
-        <li><a href="apadrinhe.html">Apadrinhe</a></li>
+        <li><a href="apadrinhe.php">Apadrinhe</a></li>
         <li><a href="sobre.html">Sobre nós</a></li>
         <li><a href="ajude.html">Ajude</a></li>
        </ul>
@@ -234,73 +239,59 @@ include 'back/conexao.php'
         <button id="read-more-btn" class="apadrinhe-button">VER MAIS BICHINHOS</button>
     </div>
 </section>
-    <div>
-      <a href="#" class="botao_apadrinhe">Saiba Mais</a>
-    </div>
+
     <section class="formulario-container">
+
     <div class="form-header-box">
-        <h2 class="form-title">
-            QUER CADASTRAR UM ANIMAL PARA ADOÇÃO?
-        </h2>
+        <h2 class="form-title">Interesse em Adoção</h2>
         <p class="form-subtitle">
-            Preencha os campos abaixo para iniciar o processo de cadastro do animal.
+            Preencha o formulário abaixo para demonstrar seu interesse
+            em adotar um de nossos animais.
         </p>
     </div>
-    <form class="adocao-form" action="processar_cadastro.php" method="POST">
-        
-        <div class="form-group">
-            <label for="nome_completo">Nome completo</label>
-            <input type="text" id="nome_completo" name="nome_completo" required>
-        </div>
+
+    <form class="adocao-form" action="back/processar_interesse.php" method="POST">
 
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-row">
-            <div class="form-group">
-                <label for="especie">Gato ou Cachorro</label>
-                <select id="especie" name="especie" required>
-                    <option value="">Selecione</option>
-                    <option value="cachorro">Cachorro</option>
-                    <option value="gato">Gato</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="raca">Raça</label>
-                <input type="text" id="raca" name="raca">
-            </div>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required>
         </div>
 
         <div class="form-row">
             <div class="form-group">
-                <label for="idade">Idade (Anos)</label>
-                <input type="number" id="idade" name="idade" min="0" required>
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone"
+                       placeholder="(11) 99999-9999">
             </div>
 
-            <div class="form-group">
-                <label for="porte">Porte</label>
-                <select id="porte" name="porte" required>
-                    <option value="">Selecione</option>
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande">Grande</option>
-                </select>
-            </div>
+        <div class="form-group">
+          <label for="id_animal">Animal de interesse</label>
+          <select name="id_animal" id="id_animal" required>
+          <option value="">Selecione um animal</option>
+
+        <?php while ($animal = $result->fetch_assoc()) { ?>
+            <option value="<?= $animal['id_animal'] ?>">
+                <?= $animal['nome'] ?> —
+                <?= ucfirst($animal['especie']) ?> |
+                Porte: <?= ucfirst($animal['porte']) ?>
+            </option>
+        <?php } ?>
+
+        </select>
+
+        </div>
         </div>
 
         <div class="form-group">
-            <label for="sexo">Sexo</label>
-            <select id="sexo" name="sexo" required>
-                <option value="">Selecione</option>
-                <option value="macho">Macho</option>
-                <option value="femea">Fêmea</option>
-            </select>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4"></textarea>
         </div>
 
-        <button type="submit" class="botao2 form-submit-btn">CADASTRAR ANIMAL</button>
+
+        <button type="submit" class="botao2 form-submit-btn">
+            Enviar interesse
+        </button>
+
     </form>
 </section>
  <footer class="footer">

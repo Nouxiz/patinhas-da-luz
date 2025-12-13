@@ -1039,7 +1039,8 @@ main {
 
 .secao_apadrinhe_ajude h2 {
   color: var(--cor-principal);
-  font-family: 'Titan One', cursive;
+  font-family: 'Titan One';
+  font-weight: 400;
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -1109,18 +1110,18 @@ main {
 .lista-contatos i {
   margin-right: 10px;
 }
-/* --- ESTILOS DO FORMULÁRIO DE CADASTRO (Novo) --- */
+
 
 .formulario-container {
     padding: 40px 20px;
-    background-color: #f7f7f7; /* Um fundo claro para destacar a seção */
+    background-color: #f7f7f7; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .form-header-box {
-    background-color: #1a237e; /* Cor escura do banner enviado */
+    background-color: #1a237e; 
     color: #ffffff;
     padding: 25px 50px;
     border-radius: 20px;
@@ -1131,9 +1132,10 @@ main {
 }
 
 .form-title {
-    font-family: 'Titan One', cursive; /* Fonte do seu projeto */
+    font-family: 'Titan One', cursive; 
     font-size: 28px;
-    color: #ffc107; /* Cor amarela do banner enviado */
+    font-weight: 400;
+    color: #ffc107; 
     margin: 0;
     line-height: 1.2;
     text-transform: uppercase;
@@ -1152,12 +1154,22 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 600px; /* Limita a largura do formulário */
+    max-width: 600px; 
 }
 
 .form-group {
     margin-bottom: 20px;
 }
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
 
 .form-group label {
     display: block;
@@ -1184,7 +1196,7 @@ main {
 
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #ffc107; /* Amarelo no foco */
+    border-color: #ffc107; 
     outline: none;
     box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
 }
@@ -1195,7 +1207,7 @@ main {
 }
 
 .form-row .form-group {
-    flex: 1; /* Faz com que os grupos de campos dividam o espaço */
+    flex: 1; /
 }
 
 .form-submit-btn {
@@ -1204,10 +1216,10 @@ main {
     font-size: 18px;
     text-transform: uppercase;
     margin-top: 10px;
-    /* Herda o estilo do .botao2 */
+    
 }
 
-/* Responsividade básica para o formulário */
+
 @media (max-width: 500px) {
     .form-header-box {
         padding: 20px 30px;
